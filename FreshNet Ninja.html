@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshNet Naija</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0e6251;
+      --secondary-color: #fdfdfd;
+      --accent-color: #e67e22;
+      --highlight-color: #fdebd0;
+      --deep-accent: #117864;
+      --text-color: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary-color), var(--deep-accent));
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .logo span {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    .hero {
+      background: url('images/hero.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      background-color: var(--highlight-color);
+      color: var(--text-color);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery h2, .about h2, .contact h2, .upload h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    .fish-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .fish-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .fish-card:hover {
+      transform: scale(1.02);
+    }
+
+    .fish-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .fish-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .fish-info h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+    }
+
+    .fish-info p {
+      font-size: 1rem;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .about p, .contact p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .upload {
+      text-align: center;
+    }
+
+    .upload input, .upload button {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jfif" alt="FreshNet Naija Logo" />
+      <span>FreshNet Naija</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#upload">Upload</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to FreshNet Naija</h1>Catfish.jfif
+      <p>Your number one source for premium Nigerian seafood</p>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>Seafood Gallery</h2>
+    <div class="fish-grid">
+      <div class="fish-card"><img src="Tilapia.jfif" alt="Tilapia"><div class="fish-info"><h3>Tilapia</h3><p>₦3,500/kg</p></div></div>
+      <div class="fish-card"><img src="Catfish.jfif" alt="Catfish"><div class="fish-info"><h3>Catfish</h3><p>₦2,800/kg</p></div></div>
+      <div class="fish-card"><img src="coaker.jfif" alt="Croaker"><div class="fish-info"><h3>Croaker</h3><p>₦4,200/kg</p></div></div>
+      <div class="fish-card"><img src="Titus fish.jfif" alt="Titus"><div class="fish-info"><h3>Titus</h3><p>₦3,900/kg</p></div></div>
+      <div class="fish-card"><img src="Snails.jfif" alt="Snail"><div class="fish-info"><h3>Snail</h3><p>₦2,000 each</p></div></div>
+      <div class="fish-card"><img src="Shrimps.jfif" alt="Shrimps"><div class="fish-info"><h3>Shrimps</h3><p>₦6,000/kg</p></div></div>
+      <div class="fish-card"><img src="crabs.jfif" alt="Crabs"><div class="fish-info"><h3>Crabs</h3><p>₦5,000/kg</p></div></div>
+      <div class="fish-card"><img src="prewinkle.jfif" alt="Periwinkle"><div class="fish-info"><h3>Periwinkle</h3><p>₦1,500/pack</p></div></div>
+      <div class="fish-card"><img src="prawns.jfif" alt="Prawns"><div class="fish-info"><h3>Prawns</h3><p>₦7,000/kg</p></div></div>
+      <div class="fish-card"><img src="Barracuda.jfif" alt="Barracuda"><div class="fish-info"><h3>Barracuda</h3><p>₦4,500/kg</p></div></div>
+      <div class="fish-card"><img src="Marcakrel.jfif" alt="Mackerel"><div class="fish-info"><h3>Mackerel</h3><p>₦3,200/kg</p></div></div>
+      <div class="fish-card"><img src="Sardines.jfif" alt="Sardines"><div class="fish-info"><h3>Sardines</h3><p>₦2,000/kg</p></div></div>
+      <div class="fish-card"><img src="Calamiri.jfif" alt="Calamari"><div class="fish-info"><h3>Calamari</h3><p>₦6,800/kg</p></div></div>
+      <div class="fish-card"><img src="Eja osun.jfif" alt="Eja Osan"><div class="fish-info"><h3>Eja Osan</h3><p>₦3,300/kg</p></div></div>
+      <div class="fish-card"><img src="lobster.jfif" alt="Lobster"><div class="fish-info"><h3>Lobster</h3><p>₦12,000/kg</p></div></div>
+    </div>
+  </section>
+
+  <section class="upload" id="upload">
+    <h2>Upload New Seafood</h2>
+    <form>
+      <input type="file" accept="image/*" /><br />
+      <input type="text" placeholder="Enter Seafood Name" /><br />
+      <input type="text" placeholder="Enter Price (₦)" /><br />
+      <button type="submit">Upload</button>
+    </form>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-color);">*Upload requires manual update or admin dashboard integration.</p>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>FreshNet Naija is dedicated to delivering the freshest and highest quality seafood to homes and businesses across Nigeria. We pride ourselves on sourcing only the best local catches and promoting the rich marine life of our country.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>For bulk purchases, custom orders, or enquiries, reach out via WhatsApp: <strong>+234-800-SEAFOOD</strong> or email: <strong>info@freshnetnaija.ng</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FreshNet Naija. All rights reserved.</p>
+  </footer>
+</body>
+</html>
